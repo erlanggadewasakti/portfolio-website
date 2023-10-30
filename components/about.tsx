@@ -18,22 +18,25 @@ export default function About() {
     >
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
-        I am an accomplished software engineer with{" "}
+        I'm a skilled software engineer with{" "}
         <span className="font-medium">2 years of professional experience</span>,
-        specializing in back-end development. My recognition comes from my
-        expertise in REST API design, testing, and optimization. I excel at
-        system maintenance, problem solving, and fostering effective team
-        collaboration. My proficiency is further evidenced by my strong
-        computing and critical thinking skills, all enhanced by my extensive
-        knowledge in application database design and management. My core stack
-        includes{" "}
+        focusing on back-end development. I'm recognized for my expertise in
+        designing, testing, and optimizing REST APIs. I'm also great at
+        maintaining systems, solving problems, and promoting effective teamwork.
+        My strengths lie in strong computing and critical thinking skills,
+        supported by my extensive knowledge of application database design and
+        management.
+        <br />
+        <br />
+        My primary tech stack includes{" "}
         <span className="font-medium">
-          Java, Tailwind, React, Next.js, Node.js, PostgreSQL, and MongoDB
+          Java, Tailwind, React, Next.js, Node.js, PostgreSQL, MySQL, and
+          MongoDB
         </span>
-        , with additional understanding in{" "}
+        . I also have a good understanding of{" "}
         <span className="font-medium">TypeScript and Prisma</span>. I have a
-        genuine passion for learning new technologies and staying ahead in the
-        ever-evolving technology. Currently, I contribute my skills and
+        genuine passion for learning new technologies and keeping up with the
+        ever-evolving tech landscape. Currently, I contribute my skills and
         knowledge as a dedicated back-end developer at Telkom University IT
         Center (PuTI).
       </p>

@@ -11,6 +11,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Erlangga | Software Engineer",
+  publisher: "Erlangga Dewa Sakti",
+  creator: "Erlangga Dewa Sakti",
+  keywords: [
+    "Portofolio",
+    "Software Engineer",
+    "Erlangga Dewa Sakti",
+    "Erlangga Dewa Sakti Portofolio",
+  ],
   description:
     "Erlangga Dewa Sakti is a talented and dedicated Software Engineer Developer with a strong track record in the field. With two years of professional experience, Erlangga has demonstrated expertise in software development, coding, and problem-solving. Erlangga's commitment to staying up-to-date with the latest industry trends and technologies makes them a valuable asset to any project or team. Whether it's designing efficient software solutions, optimizing code performance, or collaborating effectively with cross-functional teams, Erlangga's skills and passion for software engineering contribute to the success of every project they undertake.",
 };

@@ -3,16 +3,16 @@ import Header from "@/components/header";
 import ThemeSwitch from "@/components/theme-switch";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
-
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Erlangga | Personal Portfolio",
+export const metadata: Metadata = {
+  title: "Erlangga | Software Engineer",
   description:
-    "Erlangga Dewa Sakti is a software engineer developer with 2 years of experience.",
+    "Erlangga Dewa Sakti is a talented and dedicated Software Engineer Developer with a strong track record in the field. With two years of professional experience, Erlangga has demonstrated expertise in software development, coding, and problem-solving. Erlangga's commitment to staying up-to-date with the latest industry trends and technologies makes them a valuable asset to any project or team. Whether it's designing efficient software solutions, optimizing code performance, or collaborating effectively with cross-functional teams, Erlangga's skills and passion for software engineering contribute to the success of every project they undertake.",
 };
 
 export default function RootLayout({
@@ -22,6 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >

@@ -42,6 +42,7 @@ export default function RootLayout({
         content="uVUozquWmcTVMKJhhY0PpInPlivTvNMMJtFymjwL49w"
       />
       <meta name="msvalidate.01" content="DA5A237BC5A39221C824C37282FC3F63" />
+      <meta name="robots" content="all" />
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >

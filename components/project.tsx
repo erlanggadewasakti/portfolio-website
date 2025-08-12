@@ -1,7 +1,12 @@
 "use client";
 
 import { projectsData } from "@/lib/data";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { FiArrowRight, FiExternalLink, FiGithub, FiInfo } from "react-icons/fi";
@@ -21,6 +26,7 @@ export default function Project({
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isFullyVisible, setIsFullyVisible] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -29,7 +35,19 @@ export default function Project({
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  // Monitor scroll progress to determine when animation is complete
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    // When scroll progress reaches 1 (100%), the scale animation is complete
+    setIsFullyVisible(latest >= 1);
+  });
+
   const hasAvailableLinks = demoUrl || githubUrl;
+
+  const handleModalOpen = () => {
+    if (isFullyVisible) {
+      setIsModalOpen(true);
+    }
+  };
 
   const projectData = {
     title,
@@ -58,25 +76,25 @@ export default function Project({
   const getTypeColor = (type: string) => {
     switch (type) {
       case "Private":
-        return "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300 border-red-200 dark:border-red-700";
+        return "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300 border-red-200 dark:border-red-700";
       case "Enterprise":
-        return "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 border-blue-200 dark:border-blue-700";
+        return "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-blue-200 dark:border-blue-700";
       case "Government":
-        return "bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300 border-purple-200 dark:border-purple-700";
+        return "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 border-purple-200 dark:border-purple-700";
       case "AI":
-        return "bg-cyan-100 text-cyan-700 dark:bg-cyan-900 dark:text-cyan-300 border-cyan-200 dark:border-cyan-700";
+        return "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300 border-cyan-200 dark:border-cyan-700";
       case "Educational":
-        return "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 border-green-200 dark:border-green-700";
+        return "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 border-green-200 dark:border-green-700";
       case "University":
-        return "bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-300 border-indigo-200 dark:border-indigo-700";
+        return "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 border-indigo-200 dark:border-indigo-700";
       case "Desktop":
-        return "bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300 border-orange-200 dark:border-orange-700";
+        return "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 border-orange-200 dark:border-orange-700";
       case "Web App":
-        return "bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300 border-teal-200 dark:border-teal-700";
+        return "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 border-teal-200 dark:border-teal-700";
       case "Open Source":
-        return "bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 border-emerald-200 dark:border-emerald-700";
+        return "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-700";
       default:
-        return "bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-300 border-gray-200 dark:border-gray-700";
+        return "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300 border-gray-200 dark:border-gray-700";
     }
   };
 
@@ -90,11 +108,25 @@ export default function Project({
       className="mb-8 group last:mb-0"
     >
       <div
-        className="relative overflow-hidden transition-all duration-500 bg-white border shadow-lg cursor-pointer dark:bg-gray-900 rounded-2xl dark:shadow-2xl border-gray-200/50 dark:border-gray-700/50 hover:shadow-2xl dark:hover:shadow-2xl/50 hover:-translate-y-2"
-        onClick={() => setIsModalOpen(true)}
+        className={`relative overflow-hidden transition-all duration-500 bg-white border shadow-lg dark:bg-gray-900 rounded-2xl dark:shadow-2xl border-gray-200/50 dark:border-gray-700/50 hover:shadow-2xl dark:hover:shadow-2xl/50 hover:-translate-y-2 ${
+          isFullyVisible
+            ? "cursor-pointer ring-2 ring-transparent hover:ring-purple-500/50"
+            : "cursor-default"
+        }`}
+        onClick={handleModalOpen}
       >
         {/* Gradient Overlay */}
         <div className="absolute inset-0 z-10 transition-opacity duration-500 opacity-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-teal-500/10 group-hover:opacity-100" />
+
+        {/* Click Ready Indicator */}
+        {isFullyVisible && (
+          <div className="absolute z-30 top-2 left-2">
+            <div className="flex items-center gap-1 px-2 py-1 text-xs font-medium text-purple-700 bg-purple-100 border border-purple-200 rounded-full dark:bg-purple-900/50 dark:text-purple-300 dark:border-purple-700">
+              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+              Click for details
+            </div>
+          </div>
+        )}
 
         {/* Image Container */}
         <div className="relative h-64 overflow-hidden sm:h-72 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700">
@@ -108,14 +140,21 @@ export default function Project({
 
           {/* Overlay with action buttons */}
           <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black/0 group-hover:bg-black/40">
-            <div className="flex flex-col sm:flex-row gap-3 transition-all duration-300 transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <div className="flex flex-col gap-3 transition-all duration-300 transform translate-y-4 opacity-0 sm:flex-row group-hover:opacity-100 group-hover:translate-y-0">
               {/* View Details Button */}
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  setIsModalOpen(true);
+                  if (isFullyVisible) {
+                    setIsModalOpen(true);
+                  }
                 }}
-                className="flex items-center gap-2 px-6 py-3 font-medium text-white transition-all duration-300 bg-purple-600 hover:bg-purple-700 rounded-full shadow-lg hover:shadow-xl hover:scale-105"
+                disabled={!isFullyVisible}
+                className={`flex items-center gap-2 px-6 py-3 font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ${
+                  isFullyVisible
+                    ? "text-white bg-purple-600 hover:bg-purple-700 hover:scale-105"
+                    : "text-gray-400 bg-gray-500 cursor-not-allowed"
+                }`}
               >
                 <FiInfo className="w-4 h-4" />
                 View Details
@@ -206,6 +245,7 @@ export default function Project({
         <div className="h-1 transition-opacity duration-500 opacity-0 bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 group-hover:opacity-100" />
       </div>
 
+      {/* Project Modal */}
       {/* Project Modal */}
       <ProjectModal
         isOpen={isModalOpen}

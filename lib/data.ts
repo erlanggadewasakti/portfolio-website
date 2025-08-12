@@ -135,7 +135,7 @@ export const projectsData = [
       "OBE (Outcome-Based Education) is a system for managing and tracking educational outcomes, covering PEO, PLO, CLO assessments, and reporting. It helps institutions efficiently evaluate student learning achievements while supporting accreditation requirements.",
     tags: ["NestJS", "Prisma", "Microservices", "PostgreSQL", "JWT", "Angular"],
     imageUrl: obeImg,
-    demoUrl: null, // Not publicly deployed
+    demoUrl: "https://obe.telkomuniversity.ac.id/", // Not publicly deployed
     githubUrl: null, // Not open source
     status: "Completed",
     type: "Enterprise",
@@ -146,7 +146,7 @@ export const projectsData = [
       "Sirama is a course registration application at Telkom University. This application simplifies the process of registering for courses, making it convenient and efficient for students.",
     tags: ["NestJS", "Prisma", "Microservices", "PostgreSQL", "JWT"],
     imageUrl: siramaImg,
-    demoUrl: null, // Internal university system
+    demoUrl: "https://sirama.telkomuniversity.ac.id/", // Internal university system
     githubUrl: null, // Not open source
     status: "Completed",
     type: "Enterprise",
@@ -157,7 +157,7 @@ export const projectsData = [
       "S.E.E.D.S (Student Enrollment and Education Data System) is a user-friendly application designed to streamline the process of collecting biodata from incoming students at Telkom University.",
     tags: ["NestJS", "Prisma", "Microservices", "PostgreSQL", "JWT"],
     imageUrl: seedsImg,
-    demoUrl: null, // Internal university system
+    demoUrl: "https://seeds.telkomuniversity.ac.id/home", // Internal university system
     githubUrl: null, // Not open source
     status: "Completed",
     type: "Enterprise",
@@ -188,8 +188,8 @@ export const projectsData = [
       "Vercel AI SDK",
     ],
     imageUrl: tellUs,
-    demoUrl: null, // Internal university system
-    githubUrl: null, // Not open source yet
+    demoUrl: "https://www.youtube.com/watch?v=hyQijyaI1Hw", // Internal university system
+    githubUrl: "https://github.com/erlanggadewa/next-telu-tell-us", // Not open source yet
     status: "Completed",
     type: "AI",
   },
@@ -199,7 +199,7 @@ export const projectsData = [
       "Kiranagara is a free online learning platform that discusses the culture in Indonesia. Lots hope that with the creation of this e-learning website is to increase the knowledge of the nation's generations about the culture in Indonesia.",
     tags: ["Laravel", "PHP", "MySQL", "Tailwind"],
     imageUrl: kiranagaraImg,
-    demoUrl: "https://kiranagara-demo.vercel.app", // Example demo URL - replace with actual
+    demoUrl: null, // Example demo URL - replace with actual
     githubUrl: "https://github.com/erlanggadewa/kiranagara", // Example GitHub URL - replace with actual
     status: "Completed",
     type: "Educational",
@@ -211,7 +211,7 @@ export const projectsData = [
     tags: ["NestJS", "PostgreSQL", "Prisma", "JWT", "NodeMailer"],
     imageUrl: lofoImg,
     demoUrl: null, // Internal university system
-    githubUrl: "https://github.com/erlanggadewa/telu-lost-found-api", // Example GitHub URL - replace with actual
+    githubUrl: "https://github.com/erlanggadewa/BackEnd-LostAndFound", // Example GitHub URL - replace with actual
     status: "Completed",
     type: "University",
   },
@@ -221,8 +221,9 @@ export const projectsData = [
       "SIMAK (Financial Management System) is a desktop-based financial management application that offers features that allow users to carry out management related to company products, receipts and expenses.",
     tags: ["Java", "JavaFX", "MySQL"],
     imageUrl: simakImg,
-    demoUrl: null, // Desktop application
-    githubUrl: "https://github.com/erlanggadewa/simak-javafx", // Example GitHub URL - replace with actual
+    demoUrl: "https://www.youtube.com/watch?v=87gvXH8oQ2I", // Desktop application
+    githubUrl:
+      "https://github.com/erlanggadewa/Sistem-Management-Keuangan-SIMAK", // Example GitHub URL - replace with actual
     status: "Completed",
     type: "Desktop",
   },
@@ -232,8 +233,8 @@ export const projectsData = [
       "The Dewata Trans application in Malang, Indonesia, manages car rentals and tour package bookings. Admins can handle vehicle, tour package, and orderer data, stored securely in a database. They can also generate invoices from order data for transaction proof.",
     tags: ["PHP", "CSS", "JavaScript", "HTML"],
     imageUrl: dewataImg,
-    demoUrl: "https://dewata-trans-demo.vercel.app", // Example demo URL - replace with actual
-    githubUrl: "https://github.com/erlanggadewa/dewata-trans", // Example GitHub URL - replace with actual
+    demoUrl: null, // Example demo URL - replace with actual
+    githubUrl: "https://github.com/erlanggadewa/Dewata-Trans", // Example GitHub URL - replace with actual
     status: "Completed",
     type: "Web App",
   },

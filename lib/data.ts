@@ -2,6 +2,7 @@ import dewataImg from "@/public/dewata.png";
 import hedrImg from "@/public/hedr.png";
 import kiranagaraImg from "@/public/kiranagara.png";
 import lofoImg from "@/public/lofo.png";
+import obeImg from "@/public/obe.png";
 import seedsImg from "@/public/seeds.png";
 import simakImg from "@/public/simak.png";
 import siramaImg from "@/public/sirama.png";
@@ -47,7 +48,8 @@ export const experiencesData = [
       "span",
       null,
       `- JPU (Jalur Prestasi Unggulan) scholarship`,
-      React.createElement("br")
+      React.createElement("br"),
+      `- GPA  : 3.96/4.00 (Summa Cumlaude)`
     ),
     icon: React.createElement(LuGraduationCap),
     date: "09/2023 - Present",
@@ -67,7 +69,7 @@ export const experiencesData = [
       null,
       `- JPU (Jalur Prestasi Unggulan) scholarship`,
       React.createElement("br"),
-      `- GPA  : 3.96/4.00 (Cum Laude)`
+      `- GPA  : 3.96/4.00 (Cumlaude)`
     ),
     icon: React.createElement(LuGraduationCap),
     // icon: React.createElement(CgWorkAlt),
@@ -113,6 +115,13 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: `OBE (Outcome Based Education)`,
+    description:
+      "OBE (Outcome-Based Education) is a system for managing and tracking educational outcomes, covering PEO, PLO, CLO assessments, and reporting. It helps institutions efficiently evaluate student learning achievements while supporting accreditation requirements.",
+    tags: ["NestJS", "Prisma", "Microservices", "PostgreSQL", "JWT", "Angular"],
+    imageUrl: obeImg,
+  },
   {
     title: `Sirama - Back End Service`,
     description:

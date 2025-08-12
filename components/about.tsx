@@ -17,29 +17,47 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
-      <p className="mb-3">
-        I'm a skilled software engineer with{" "}
-        <span className="font-medium">2 years of professional experience</span>,
-        focusing on back-end development. I'm recognized for my expertise in
-        designing, testing, and optimizing REST APIs. I'm also great at
-        maintaining systems, solving problems, and promoting effective teamwork.
-        My strengths lie in strong computing and critical thinking skills,
-        supported by my extensive knowledge of application database design and
-        management.
+      <div className="cv-summary">
+        <p>
+          I'm a professional software engineer with over 3 years of experience
+          combining system analysis expertise with robust back-end development
+          skills. Currently serving dual roles as a System Analyst for Outcome
+          Based Education (OBE) applications and a Back-End Developer, I bridge
+          business requirements with technical excellence.
+        </p>
         <br />
+        <p>
+          As a System Analyst, I specialize in analyzing complex educational
+          workflows including PEO, PLO, CLO assessments, and reporting systems.
+          My expertise encompasses functional specification design, business
+          process modeling (DFD/UML/BPMN), and seamless integration with
+          academic systems like iGracias and LMS platforms while ensuring
+          compliance with accreditation standards.
+        </p>
         <br />
-        My primary tech stack includes{" "}
-        <span className="font-medium">
-          Java, Tailwind, React, Next.js, Node.js, PostgreSQL, MySQL, and
-          MongoDB
-        </span>
-        . I also have a good understanding of{" "}
-        <span className="font-medium">TypeScript and Prisma</span>. I have a
-        genuine passion for learning new technologies and keeping up with the
-        ever-evolving tech landscape. Currently, I contribute my skills and
-        knowledge as a dedicated back-end developer at Telkom University IT
-        Center (PuTI).
-      </p>
+
+        <p>
+          With 3+ years of back-end development experience, I have successfully
+          architected high-performance RESTful services using{" "}
+          <strong>
+            NestJS, TypeScript, Laravel, PHP, PostgreSQL, and Prisma ORM
+          </strong>
+          . I excel in microservices architecture, production system
+          maintenance, and delivering scalable solutions with impeccable
+          functionality and performance.
+        </p>
+        <br />
+
+        <p>
+          My unique dual perspective enables comprehensive understanding of the
+          software development lifecycle from requirements analysis to technical
+          implementation. I leverage modern tools including Postman and GitLab
+          while maintaining expertise in database design and management.
+          Currently contributing at Telkom University IT Center (PuTI), I'm
+          committed to delivering innovative solutions that drive educational
+          excellence through technology.
+        </p>
+      </div>
     </motion.section>
   );
 }

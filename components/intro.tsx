@@ -63,9 +63,11 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I'm Erlangga Dewa Sakti.</span> I'm a{" "}
         <span className="font-bold">software engineer</span> with{" "}
-        <span className="font-bold">2 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">NodeJS and Java</span>.
+        <span className="font-bold">
+          {new Date().getFullYear() - 2022} years
+        </span>{" "}
+        of experience. I enjoy building{" "}
+        <span className="italic">application</span>.
       </motion.h1>
 
       <motion.div

@@ -42,12 +42,26 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Master Degree of Computer Science",
+    location: "Telkom University, Indonesia",
+    description: React.createElement("span", null, `- Scholarship Recipient`),
+    icon: React.createElement(LuGraduationCap),
+    date: "09/2023 - Present",
+  },
+  {
+    title: "System Analyst",
+    location: "Telkom University, Indonesia",
+    description: `I adeptly design and maintain high-performance RESTful services, ensuring impeccable functionality and seamless system operation. I prioritize clear communication, consistently providing progress updates to the system analyst, and foster a culture of collaboration within the team, contributing to the successful achievement of project goals.`,
+    icon: React.createElement(CgWorkAlt),
+    date: "02/2022 - Present",
+  },
+  {
     title: "Bachelor Degree of Computer Science",
     location: "Telkom University, Indonesia",
     description: React.createElement(
       "span",
       null,
-      `- JPU (Jalur Prestasi Unggulan) scholarship`,
+      `- Scholarship Recipient`,
       React.createElement("br"),
       `- GPA  : 3.96/4.00 (Summa Cumlaude)`
     ),
@@ -67,7 +81,7 @@ export const experiencesData = [
     description: React.createElement(
       "span",
       null,
-      `- JPU (Jalur Prestasi Unggulan) scholarship`,
+      `- Scholarship Recipient`,
       React.createElement("br"),
       `- GPA  : 3.96/4.00 (Cumlaude)`
     ),
@@ -121,6 +135,10 @@ export const projectsData = [
       "OBE (Outcome-Based Education) is a system for managing and tracking educational outcomes, covering PEO, PLO, CLO assessments, and reporting. It helps institutions efficiently evaluate student learning achievements while supporting accreditation requirements.",
     tags: ["NestJS", "Prisma", "Microservices", "PostgreSQL", "JWT", "Angular"],
     imageUrl: obeImg,
+    demoUrl: null, // Not publicly deployed
+    githubUrl: null, // Not open source
+    status: "Completed",
+    type: "Enterprise",
   },
   {
     title: `Sirama - Back End Service`,
@@ -128,6 +146,10 @@ export const projectsData = [
       "Sirama is a course registration application at Telkom University. This application simplifies the process of registering for courses, making it convenient and efficient for students.",
     tags: ["NestJS", "Prisma", "Microservices", "PostgreSQL", "JWT"],
     imageUrl: siramaImg,
+    demoUrl: null, // Internal university system
+    githubUrl: null, // Not open source
+    status: "Completed",
+    type: "Enterprise",
   },
   {
     title: `S.E.E.D.S - Back End Service`,
@@ -135,14 +157,21 @@ export const projectsData = [
       "S.E.E.D.S (Student Enrollment and Education Data System) is a user-friendly application designed to streamline the process of collecting biodata from incoming students at Telkom University.",
     tags: ["NestJS", "Prisma", "Microservices", "PostgreSQL", "JWT"],
     imageUrl: seedsImg,
+    demoUrl: null, // Internal university system
+    githubUrl: null, // Not open source
+    status: "Completed",
+    type: "Enterprise",
   },
-
   {
     title: `Higher Education Digital Readiness`,
     description:
       "Questionnaire application that is useful for collecting digital readiness level data for all campuses in Indonesia.",
     tags: ["T3 Stack", "TypeScript", "Tailwind", "PostgreSQL"],
     imageUrl: hedrImg,
+    demoUrl: null, // Government project, not public
+    githubUrl: null, // Not open source
+    status: "Completed",
+    type: "Government",
   },
   {
     title: "Telu Tell Us",
@@ -159,6 +188,10 @@ export const projectsData = [
       "Vercel AI SDK",
     ],
     imageUrl: tellUs,
+    demoUrl: null, // Internal university system
+    githubUrl: null, // Not open source yet
+    status: "Completed",
+    type: "AI",
   },
   {
     title: "Kiranagara",
@@ -166,6 +199,10 @@ export const projectsData = [
       "Kiranagara is a free online learning platform that discusses the culture in Indonesia. Lots hope that with the creation of this e-learning website is to increase the knowledge of the nation's generations about the culture in Indonesia.",
     tags: ["Laravel", "PHP", "MySQL", "Tailwind"],
     imageUrl: kiranagaraImg,
+    demoUrl: "https://kiranagara-demo.vercel.app", // Example demo URL - replace with actual
+    githubUrl: "https://github.com/erlanggadewa/kiranagara", // Example GitHub URL - replace with actual
+    status: "Completed",
+    type: "Educational",
   },
   {
     title: "TelU Lost and Found - Back End Service",
@@ -173,6 +210,10 @@ export const projectsData = [
       "Application functions as a forum or media for Telkom University students if they want to make reports of lost or found items.",
     tags: ["NestJS", "PostgreSQL", "Prisma", "JWT", "NodeMailer"],
     imageUrl: lofoImg,
+    demoUrl: null, // Internal university system
+    githubUrl: "https://github.com/erlanggadewa/telu-lost-found-api", // Example GitHub URL - replace with actual
+    status: "Completed",
+    type: "University",
   },
   {
     title: "SIMAK",
@@ -180,6 +221,10 @@ export const projectsData = [
       "SIMAK (Financial Management System) is a desktop-based financial management application that offers features that allow users to carry out management related to company products, receipts and expenses.",
     tags: ["Java", "JavaFX", "MySQL"],
     imageUrl: simakImg,
+    demoUrl: null, // Desktop application
+    githubUrl: "https://github.com/erlanggadewa/simak-javafx", // Example GitHub URL - replace with actual
+    status: "Completed",
+    type: "Desktop",
   },
   {
     title: "Dewata Trans",
@@ -187,6 +232,10 @@ export const projectsData = [
       "The Dewata Trans application in Malang, Indonesia, manages car rentals and tour package bookings. Admins can handle vehicle, tour package, and orderer data, stored securely in a database. They can also generate invoices from order data for transaction proof.",
     tags: ["PHP", "CSS", "JavaScript", "HTML"],
     imageUrl: dewataImg,
+    demoUrl: "https://dewata-trans-demo.vercel.app", // Example demo URL - replace with actual
+    githubUrl: "https://github.com/erlanggadewa/dewata-trans", // Example GitHub URL - replace with actual
+    status: "Completed",
+    type: "Web App",
   },
 ] as const;
 

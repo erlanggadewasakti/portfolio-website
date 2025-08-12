@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import ThemeSwitch from "@/components/theme-switch";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
+import { experienceYears } from "@/lib/year-experience";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
@@ -23,9 +24,7 @@ export const metadata: Metadata = {
     "Industry Trends",
     "Team Collaboration",
   ],
-
-  description:
-    "Erlangga Dewa Sakti is a talented Software Engineer with two years of professional experience. Expertise in software development, coding, and problem-solving. Committed to staying up-to-date with industry trends. Valuable asset to any project or team.",
+  description: `Erlangga Dewa Sakti is a talented Software Engineer with ${experienceYears} years of professional experience. Expertise in software development, coding, and problem-solving. Committed to staying up-to-date with industry trends. Valuable asset to any project or team.`,
 };
 
 export default function RootLayout({

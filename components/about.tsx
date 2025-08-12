@@ -1,6 +1,7 @@
 "use client";
 
 import { useSectionInView } from "@/lib/hooks";
+import { experienceYears } from "@/lib/year-experience";
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
 
@@ -19,11 +20,11 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
       <div className="cv-summary">
         <p>
-          I'm a professional software engineer with over 3 years of experience
-          combining system analysis expertise with robust back-end development
-          skills. Currently serving dual roles as a System Analyst for Outcome
-          Based Education (OBE) applications and a Back-End Developer, I bridge
-          business requirements with technical excellence.
+          I'm a professional software engineer with over {experienceYears} years
+          of experience combining system analysis expertise with robust back-end
+          development skills. Currently serving dual roles as a System Analyst
+          for Outcome Based Education (OBE) applications and a Back-End
+          Developer, I bridge business requirements with technical excellence.
         </p>
         <br />
         <p>

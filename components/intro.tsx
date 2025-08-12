@@ -2,6 +2,7 @@
 
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
+import { experienceYears } from "@/lib/year-experience";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,11 +64,9 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I'm Erlangga Dewa Sakti.</span> I'm a{" "}
         <span className="font-bold">software engineer</span> with{" "}
-        <span className="font-bold">
-          {new Date().getFullYear() - 2022} years
-        </span>{" "}
-        of experience. I enjoy building{" "}
-        <span className="italic">application</span>.
+        <span className="font-bold">{experienceYears} years</span> of
+        experience. I enjoy building <span className="italic">application</span>
+        .
       </motion.h1>
 
       <motion.div
